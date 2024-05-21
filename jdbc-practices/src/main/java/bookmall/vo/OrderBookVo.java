@@ -6,6 +6,8 @@ public class OrderBookVo {
 	private Long bookNo;
 	private Long orderNo;
 	
+	private String bookTitle;
+	
 	public Long getBookNo() {
 		return bookNo;
 	}
@@ -29,5 +31,12 @@ public class OrderBookVo {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	
+	public String getBookTitle() {
+		return bookTitle;
+	}
+	public void setBookTitle(String bookTitle) {
+		this.bookTitle = bookTitle;
 	}
 }

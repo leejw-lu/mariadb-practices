@@ -4,6 +4,8 @@ public class CartVo {
 	private int quantity;
 	private Long bookNo;
 	private Long userNo;
+	
+	private String bookTitle;
 
 	public int getQuantity() {
 		return quantity;
@@ -29,4 +31,12 @@ public class CartVo {
 		this.userNo = userNo;
 	}
 	
+	public String getBookTitle() {
+		return bookTitle;
+	}
+
+	public void setBookTitle(String bookTitle) {
+		this.bookTitle = bookTitle;
+	}
+
 }

@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import bookmall.vo.BookVo;
-import bookmall.vo.UserVo;
 
 public class BookDao {
 	private Connection getConnection() throws SQLException {
@@ -48,4 +47,17 @@ public class BookDao {
 	      
 	      return result;
 	   }
+
+	public void deleteByNo(Long no) {
+		try (
+			Connection conn= getConnection();
+			PreparedStatement pstmt= conn.prepareStatement("delete from book where no = ?");
+		) { 
+			pstmt.setLong(1, no);
+			pstmt.executeUpdate();			
+		} catch (SQLException e) {
+				System.out.println("error:" + e);
+		}
+		
+	}
 }
